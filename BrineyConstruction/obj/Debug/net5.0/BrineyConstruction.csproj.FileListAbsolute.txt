@@ -51,7 +51,6 @@ C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\BrineyConstruction.csproj.AssemblyReference.cache
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\BrineyConstruction.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\BrineyConstruction.AssemblyInfoInputs.cache
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\BrineyConstruction.AssemblyInfo.cs
@@ -475,3 +474,13 @@ C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Microsoft.Rest.ClientRuntime.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Microsoft.WindowsAzure.Storage.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\BrineyConstruction.csproj.AssemblyReference.cache
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Azure.Storage.Blobs.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Azure.Storage.Common.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\System.Memory.Data.dll
+C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\Razor\Pages\Projects\Create.cshtml.g.cs

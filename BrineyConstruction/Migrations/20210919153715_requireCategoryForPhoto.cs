@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BrineyConstruction.Data.Migrations
+namespace BrineyConstruction.Migrations
 {
-    public partial class AddIndentityToDb : Migration
+    public partial class requireCategoryForPhoto : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
