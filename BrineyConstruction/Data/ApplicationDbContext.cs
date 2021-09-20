@@ -15,16 +15,16 @@ namespace BrineyConstruction.Data
         }
 
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
-        public DbSet<Photo> Photos { get; set; }
-        public DbSet<Category> Categories { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<Project> Projects { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.Entity<Photo>()
-                .HasOne(p => p.Category)
-                .WithMany(b => b.Photos)
-                .HasForeignKey(p => p.CategoryId)
+            builder.Entity<Image>()
+                .HasOne(p => p.Project)
+                .WithMany(b => b.Images)
+                .HasForeignKey(p => p.ProjectId)
                 .OnDelete(DeleteBehavior.Cascade);
         }
     }

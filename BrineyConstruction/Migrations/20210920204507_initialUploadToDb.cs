@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BrineyConstruction.Migrations
 {
-    public partial class addCurrentModelsToDb : Migration
+    public partial class initialUploadToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,16 +50,16 @@ namespace BrineyConstruction.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Categories",
+                name: "Projects",
                 columns: table => new
                 {
-                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                    ProjectId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Categories", x => x.CategoryId);
+                    table.PrimaryKey("PK_Projects", x => x.ProjectId);
                 });
 
             migrationBuilder.CreateTable(
@@ -169,22 +169,22 @@ namespace BrineyConstruction.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Photos",
+                name: "Images",
                 columns: table => new
                 {
-                    PhotoId = table.Column<int>(type: "int", nullable: false)
+                    ImageId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                    ProjectId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Photos", x => x.PhotoId);
+                    table.PrimaryKey("PK_Images", x => x.ImageId);
                     table.ForeignKey(
-                        name: "FK_Photos_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "CategoryId",
+                        name: "FK_Images_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
+                        principalColumn: "ProjectId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -228,9 +228,9 @@ namespace BrineyConstruction.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Photos_CategoryId",
-                table: "Photos",
-                column: "CategoryId");
+                name: "IX_Images_ProjectId",
+                table: "Images",
+                column: "ProjectId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -251,7 +251,7 @@ namespace BrineyConstruction.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Photos");
+                name: "Images");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -260,7 +260,7 @@ namespace BrineyConstruction.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "Categories");
+                name: "Projects");
         }
     }
 }

@@ -6,21 +6,21 @@
 }
 <h1>It works!</h1>
 
+
+<!--Form for uploading image-->
 <form enctype="multipart/form-data" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="row form-group">
-        <input type="hidden" asp-for="Photo.PhotoId" />
+        <input type="hidden" asp-for="Image.ImageId" />
         <div class="col-4">
             <label class="col-form-label">Category</label>
         </div>
         <div class="col-8">
-            <input type="hidden" asp-for="Photo.CategoryId" />
-            <select asp-for="Photo.Category" id="categories" class="form-control" name="categories">
+            <input type="hidden" asp-for="Image.ProjectId" />
+            <select asp-for="Image.ProjectId" id="categories" class="form-control" name="categories">
                 @if (Model.CategoryList.Count == 0)
                 {
                     <option value="" selected disabled hidden>No categories</option>
-
-
                 }
                 else
                 {
@@ -31,7 +31,7 @@
                     }
                 }
             </select>
-            <span asp-validation-for="Photo.Category" class="text-danger"></span>
+            <span asp-validation-for="Image.ProjectId" class="text-danger"></span>
             <br />
             <!-- Button to Open the Modal -->
             <button type="button" class="btn-sm btn btn-primary" data-toggle="modal" data-target="#myModal">
@@ -44,13 +44,13 @@
             <label class="col-form-label">Upload Image</label>
         </div>
         <div class="col-8">
-            <input type="file" asp-for="Photo.Name" id="image-file" name="filename">
-            <span asp-validation-for="Photo.Name" class="text-danger"></span>
+            <input type="file" asp-for="Image.Name" id="image-file" name="filename">
+            <span asp-validation-for="Image.Name" class="text-danger"></span>
         </div>
     </div>
     <div class="row form-group">
         <div class="col-12">
-            <input asp-page-handler="Photo" type="submit" value="Submit" style="margin-right: 0;" class="form-control offset-4 col-8 btn btn-primary" />
+            <input asp-page-handler="Image" type="submit" value="Submit" style="margin-right: 0;" class="form-control offset-4 col-8 btn btn-primary" />
         </div>
     </div>
 </form>
@@ -66,9 +66,10 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
 
+            <!--Form for uploading category-->
             <form enctype="multipart/form-data" method="post">
-                
-                <input type="hidden" asp-for="Category.CategoryId" />
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <input type="hidden" asp-for="Project.ProjectId" />
                 <!-- Modal body -->
                 <div class="modal-body">
 
@@ -77,16 +78,16 @@
                             Category
                         </div>
                         <div class="col-8">
-                            <input type="text" asp-for="Category.Name" class="form-control" />
-                            <span asp-validation-for="Category.Name" class="text-danger"></span>
+                            <input type="text" asp-for="Project.Name" class="form-control" />
+                            <span asp-validation-for="Project.Name" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Modal footer -->
-                <div class="modal-footer row form-group">
+                <div class="modal-footer row form-group" style="width:100%; margin: 0 auto;">
                         <div class="col-6">
-                            <input asp-page-handler="Category" type="submit" class="btn btn-primary form-control" value="Create" />
+                            <input asp-page-handler="Project" type="submit" class="btn btn-primary form-control" value="Create" />
                         </div>
                         <div class="col-5">
                             <input  type="button" class="btn btn-danger form-control" data-dismiss="modal" value="Close" />

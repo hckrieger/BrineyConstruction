@@ -478,7 +478,6 @@ C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Microsoft.Rest.ClientRuntime.dll
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Microsoft.Rest.ClientRuntime.Azure.dll
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Microsoft.WindowsAzure.Storage.dll
-C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\obj\Debug\net5.0\BrineyConstruction.csproj.AssemblyReference.cache
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Azure.Core.dll
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Azure.Storage.Blobs.dll
 C:\Users\hunte\source\repos\ASP\BrineyConstruction\BrineyConstruction\bin\Debug\net5.0\Azure.Storage.Common.dll

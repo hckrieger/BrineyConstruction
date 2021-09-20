@@ -19,9 +19,9 @@ namespace BrineyConstruction.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BrineyConstruction.Models.Category", b =>
+            modelBuilder.Entity("BrineyConstruction.Models.Image", b =>
                 {
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("ImageId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -30,30 +30,30 @@ namespace BrineyConstruction.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CategoryId");
-
-                    b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("BrineyConstruction.Models.Photo", b =>
-                {
-                    b.Property<int>("PhotoId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CategoryId")
+                    b.Property<int>("ProjectId")
                         .HasColumnType("int");
 
+                    b.HasKey("ImageId");
+
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("Images");
+                });
+
+            modelBuilder.Entity("BrineyConstruction.Models.Project", b =>
+                {
+                    b.Property<int>("ProjectId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("PhotoId");
+                    b.HasKey("ProjectId");
 
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Photos");
+                    b.ToTable("Projects");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -271,15 +271,15 @@ namespace BrineyConstruction.Migrations
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
 
-            modelBuilder.Entity("BrineyConstruction.Models.Photo", b =>
+            modelBuilder.Entity("BrineyConstruction.Models.Image", b =>
                 {
-                    b.HasOne("BrineyConstruction.Models.Category", "Category")
-                        .WithMany("Photos")
-                        .HasForeignKey("CategoryId")
+                    b.HasOne("BrineyConstruction.Models.Project", "Project")
+                        .WithMany("Images")
+                        .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("Project");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -333,9 +333,9 @@ namespace BrineyConstruction.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("BrineyConstruction.Models.Category", b =>
+            modelBuilder.Entity("BrineyConstruction.Models.Project", b =>
                 {
-                    b.Navigation("Photos");
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }
